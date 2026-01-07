@@ -74,18 +74,19 @@ This is a limitation of the [Capacities API](https://docs.capacities.io/develope
 
 ## What You Can Actually Do
 
-| Feature | Works? | Details |
-|---------|--------|---------|
-| List your spaces | Yes | Get space IDs and titles |
-| Search by title | Yes | Find objects, get IDs (not content) |
-| Get object types | Yes | See available structures in a space |
-| Create objects | Yes | Create Books, People, Meetings, custom types |
-| Save weblinks | Yes | Clip URLs with tags and notes |
-| Add to daily note | Yes | Append markdown to today's note |
-| Open objects | Yes | Deep-link into the desktop app |
-| **Read object content** | **NO** | **Not possible - API limitation** |
-| **Export data** | **NO** | **Not possible - API limitation** |
-| **Get page/note body** | **NO** | **Not possible - API limitation** |
+| Feature | Works? | Requires Desktop App | Details |
+|---------|--------|---------------------|---------|
+| List your spaces | Yes | No | Get space IDs and titles |
+| Search by title | Yes | No | Find objects, get IDs (not content) |
+| Get object types | Yes | No | See available structures in a space |
+| Create objects | Yes | **Yes** | Create Books, People, Meetings, custom types |
+| Save weblinks | Yes | No | Clip URLs with tags and notes |
+| Add to daily note | Yes | No | Append markdown to today's note |
+| Open objects | Yes | **Yes** | Deep-link into the desktop app |
+| Get current object | Yes | **Yes** | Get info about open object |
+| **Read object content** | **NO** | - | **Not possible - API limitation** |
+| **Export data** | **NO** | - | **Not possible - API limitation** |
+| **Get page/note body** | **NO** | - | **Not possible - API limitation** |
 
 ## Installation
 
@@ -93,7 +94,7 @@ This is a limitation of the [Capacities API](https://docs.capacities.io/develope
 
 - Node.js 18+
 - **Capacities.io Pro subscription** (required for API access)
-- Capacities desktop app (required for creating objects)
+- **Capacities desktop app must be running** (required for creating objects, opening objects, and getting current object info)
 
 ### Quick Start
 
