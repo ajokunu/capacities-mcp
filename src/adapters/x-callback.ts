@@ -77,9 +77,9 @@ async function openUrl(url: string): Promise<void> {
       // macOS - use 'open' command
       proc = spawn('open', [url], { stdio: 'ignore' });
     } else if (os === 'win32') {
-      // Windows - use cmd.exe with /c start
-      // We pass URL as a separate argument to avoid shell injection
-      proc = spawn('cmd.exe', ['/c', 'start', '', url], { stdio: 'ignore' });
+      // Windows - use PowerShell to handle URLs with query parameters correctly
+      // cmd.exe mishandles special characters like ? and & in URLs
+      proc = spawn('powershell', ['-Command', `Start-Process '${url}'`], { stdio: 'ignore' });
     } else {
       // Linux - use xdg-open
       proc = spawn('xdg-open', [url], { stdio: 'ignore' });

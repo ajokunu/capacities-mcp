@@ -6,6 +6,7 @@
  * Uses REST API for reads and x-callback-urls for writes
  */
 
+import 'dotenv/config';
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
 import { StdioServerTransport } from '@modelcontextprotocol/sdk/server/stdio.js';
 import {
